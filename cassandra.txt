@@ -1,0 +1,2 @@
+docker run --name cassandra -p 7000:7000 -p 7001:7001 -p 9042:9042 --restart=always -m 8G --cpuset-cpus="8-11" -d -e CASSANDRA_BROADCAST_ADDRESS=123.123.123.123 -v /home/cassandra/data:/var/lib/cassandra cassandra:3.11.3
+docker run --name cassandra -p 7000:7000 -p 7001:7001 -p 9042:9042 --restart=always -m 8G --cpuset-cpus="8-11" -d -e CASSANDRA_BROADCAST_ADDRESS=123.123.123.122-e CASSANDRA_SEEDS=123.123.123.123,123.123.123.124 -v /home/cassandra/data:/var/lib/cassandra cassandra:3.11.3
