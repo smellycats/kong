@@ -1,1 +1,1 @@
-docker run -d -p 1337:1337 --link kong:kong --name konga -e "NODE_ENV=development" pantsel/konga
+docker run -d -p 1337:1337 --link kong:kong --name konga --restart=always --log-opt max-size=200m --log-opt max-file=3 -e "NODE_ENV=development" pantsel/konga
